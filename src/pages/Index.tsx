@@ -4,9 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skull, Heart, Pill, MessageCircle } from 'lucide-react';
+import { SkullImageUploader } from '@/components/BackgroundRemover';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [skullImageUrl, setSkullImageUrl] = useState<string | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -44,10 +46,23 @@ const Index = () => {
       <section className="min-h-screen flex flex-col items-center justify-center px-4 relative z-10">
         <div className={`text-center max-w-5xl mx-auto transition-all duration-1500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           
-          {/* Skull Icon */}
-          <div className="mb-8">
-            <Skull className="w-20 h-20 mx-auto text-red-500 drop-shadow-2xl animate-pulse" 
-                   style={{ filter: 'drop-shadow(0 0 20px rgba(239, 68, 68, 0.6))' }} />
+          {/* Skull Image */}
+          <div className="mb-8 relative">
+            {skullImageUrl ? (
+              <img 
+                src={skullImageUrl} 
+                alt="Skull" 
+                className="w-20 h-20 mx-auto drop-shadow-2xl animate-pulse"
+                style={{ filter: 'drop-shadow(0 0 20px rgba(239, 68, 68, 0.6))' }}
+              />
+            ) : (
+              <div className="w-20 h-20 mx-auto bg-gray-800/50 border-2 border-red-500/30 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                <div className="text-4xl">💀</div>
+              </div>
+            )}
+            <div className="mt-4">
+              <SkullImageUploader onImageProcessed={setSkullImageUrl} />
+            </div>
           </div>
 
           {/* Main Headline */}
@@ -106,9 +121,9 @@ const Index = () => {
             <h3 className="text-3xl font-bold text-white mt-6 font-playfair">
               DR. Jareer Samad
             </h3>
-            <p className="text-lg text-gray-300 mt-2">
-              Specialist in Post-AI Creativity
-            </p>
+          <p className="text-lg text-gray-300 mt-2">
+            Chief Marketing Exorcist
+          </p>
           </div>
         </div>
       </section>
@@ -117,10 +132,15 @@ const Index = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-transparent to-green-900/10">
         <div className="max-w-4xl mx-auto text-center">
           
-          {/* Doctor Silhouette */}
+          {/* Doctor Silhouette with Slow Pop Heart */}
           <div className="mb-12 relative">
+            {/* Floating Heart Above */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+              <Heart className="w-8 h-8 text-green-400 animate-[bounce_3s_ease-in-out_infinite]" />
+            </div>
+            
             <div className="w-24 h-24 mx-auto bg-green-400/20 rounded-full flex items-center justify-center mb-6">
-              <Heart className="w-12 h-12 text-green-400 animate-pulse" />
+              <Heart className="w-12 h-12 text-green-400 animate-[pulse_2s_ease-in-out_infinite]" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-8">
               It Could've Been Saved
@@ -132,7 +152,7 @@ const Index = () => {
               <blockquote className="text-xl md:text-2xl text-gray-300 leading-relaxed italic mb-6">
                 "Marketing didn't have to die. With the right intervention by{' '}
                 <strong className="text-green-400 not-italic">Dr. Jareer Samad</strong>, 
-                Specialist in Post-AI Creativity, it could have been saved."
+                Chief Marketing Exorcist, it could have been saved."
               </blockquote>
               
               {/* Prescription Pad Style */}
@@ -151,7 +171,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           
           <div className="text-center mb-16">
-            <Pill className="w-16 h-16 mx-auto text-lime-400 mb-6 animate-bounce" />
+            <Pill className="w-16 h-16 mx-auto text-lime-400 mb-6 animate-[bounce_3s_ease-in-out_infinite]" />
             <h2 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-4">
               Your Brand's Revival Prescription
             </h2>
@@ -166,8 +186,8 @@ const Index = () => {
               >
                 <CardContent className="p-8">
                   
-                  {/* Pill Icon */}
-                  <div className="text-6xl mb-6 text-center animate-bounce transition-all duration-300">
+                  {/* Service Icon */}
+                  <div className="text-6xl mb-6 text-center animate-[bounce_3s_ease-in-out_infinite] transition-all duration-300">
                     {service.icon}
                   </div>
                   
