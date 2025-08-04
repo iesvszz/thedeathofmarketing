@@ -3,27 +3,14 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Cross, Heart, Activity, FileText, Pill, MessageCircle, ChevronDown } from 'lucide-react';
+import { Skull, Heart, Pill, MessageCircle } from 'lucide-react';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [heartbeatActive, setHeartbeatActive] = useState(true);
 
   useEffect(() => {
     setIsVisible(true);
-    
-    // Stop heartbeat after 3 seconds to simulate flatlining
-    const timer = setTimeout(() => {
-      setHeartbeatActive(false);
-    }, 3000);
-    
-    return () => clearTimeout(timer);
   }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const services = [
     {
@@ -57,9 +44,10 @@ const Index = () => {
       <section className="min-h-screen flex flex-col items-center justify-center px-4 relative z-10">
         <div className={`text-center max-w-5xl mx-auto transition-all duration-1500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           
-          {/* Funeral Icon */}
-          <div className="mb-8 animate-pulse">
-            <Cross className="w-20 h-20 mx-auto text-red-500 drop-shadow-2xl" />
+          {/* Skull Icon */}
+          <div className="mb-8">
+            <Skull className="w-20 h-20 mx-auto text-red-500 drop-shadow-2xl animate-pulse" 
+                   style={{ filter: 'drop-shadow(0 0 20px rgba(239, 68, 68, 0.6))' }} />
           </div>
 
           {/* Main Headline */}
@@ -77,7 +65,7 @@ const Index = () => {
           </div>
 
           {/* Obituary Text */}
-          <div className="bg-black/80 border-2 border-red-500/30 rounded-lg p-8 mb-8 backdrop-blur-sm relative">
+          <div className="bg-black/80 border-2 border-red-500/30 rounded-lg p-8 mb-12 backdrop-blur-sm relative">
             <div className="absolute top-2 right-2">
               <Badge variant="destructive" className="animate-pulse">DECEASED</Badge>
             </div>
@@ -97,70 +85,31 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Heartbeat Monitor */}
-          <div className="mb-8 p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
-            <div className="flex items-center justify-center space-x-4">
-              <Activity className={`w-6 h-6 text-green-400 ${heartbeatActive ? 'animate-pulse' : 'opacity-30'}`} />
-              <div className="text-green-400 font-mono">
-                {heartbeatActive ? '♥ 120 BPM' : '♥ 0 BPM - FLATLINED'}
-              </div>
-            </div>
-          </div>
-
-          <Button 
-            onClick={() => scrollToSection('culprits')}
-            className="bg-red-600 hover:bg-red-700 text-white px-12 py-6 text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-red-600/50 hover:scale-105"
-          >
-            View Autopsy Report
-            <ChevronDown className="ml-2 h-6 w-6 animate-bounce" />
-          </Button>
-        </div>
-      </section>
-
-      {/* Suspected Culprits Section */}
-      <section id="culprits" className="py-20 px-4 relative">
-        <div className="max-w-4xl mx-auto">
-          
-          {/* Evidence Board Header */}
-          <div className="text-center mb-16">
+          {/* Doctor Photo Section */}
+          <div className="mb-12 relative">
             <div className="relative inline-block">
-              <FileText className="w-16 h-16 mx-auto text-yellow-400 mb-6 animate-bounce" />
-              <h2 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-4">
-                Suspected Culprits
-              </h2>
-              {/* Pin Effect */}
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full shadow-lg"></div>
-            </div>
-          </div>
-
-          {/* Evidence List */}
-          <Card className="bg-yellow-100/10 border-yellow-400/30 backdrop-blur-sm relative transform -rotate-1 hover:rotate-0 transition-transform duration-500">
-            <CardContent className="p-8 md:p-12">
-              
-              {/* Tape Effect */}
-              <div className="absolute top-0 left-1/4 w-16 h-8 bg-yellow-200/20 transform -rotate-12 border border-yellow-400/50"></div>
-              
-              <div className="space-y-6">
-                {[
-                  "Fear of standing out",
-                  "AI-generated sameness", 
-                  "Viral envy disorder"
-                ].map((culprit, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center space-x-4 text-xl md:text-2xl text-white hover:text-red-400 transition-colors duration-300 cursor-pointer group"
-                    style={{ animationDelay: `${index * 200}ms` }}
-                  >
-                    <div className="w-4 h-4 border-2 border-red-500 bg-red-500/20 group-hover:bg-red-500 transition-colors duration-300"></div>
-                    <span className="font-medium relative">
-                      {culprit}
-                      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-500"></div>
-                    </span>
-                  </div>
-                ))}
+              {/* Smoke Effects */}
+              <div className="absolute inset-0 animate-pulse">
+                <div className="absolute -top-8 -left-8 w-32 h-32 bg-gray-400/10 rounded-full blur-xl animate-bounce"></div>
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gray-400/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute -bottom-2 -left-4 w-20 h-20 bg-gray-400/20 rounded-full blur-md animate-bounce" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute -bottom-6 -right-8 w-28 h-28 bg-gray-400/8 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
               </div>
-            </CardContent>
-          </Card>
+              
+              {/* Photo Placeholder */}
+              <div className="w-40 h-40 mx-auto bg-gray-800/50 border-4 border-red-500/30 rounded-full flex items-center justify-center relative z-10 backdrop-blur-sm">
+                <div className="text-6xl">👨‍⚕️</div>
+              </div>
+            </div>
+            
+            {/* Doctor Name */}
+            <h3 className="text-3xl font-bold text-white mt-6 font-playfair">
+              DR. Jareer Samad
+            </h3>
+            <p className="text-lg text-gray-300 mt-2">
+              Specialist in Post-AI Creativity
+            </p>
+          </div>
         </div>
       </section>
 
@@ -218,7 +167,8 @@ const Index = () => {
                 <CardContent className="p-8">
                   
                   {/* Pill Icon */}
-                  <div className="text-6xl mb-6 text-center group-hover:animate-bounce transition-all duration-300">
+                  <div className="text-6xl mb-6 text-center animate-bounce transition-all duration-300" 
+                       style={{ animationDelay: `${index * 0.2}s` }}>
                     {service.icon}
                   </div>
                   
@@ -232,10 +182,6 @@ const Index = () => {
                     {service.description}
                   </p>
                   
-                  {/* Dosage Info */}
-                  <div className="mt-6 text-sm text-lime-400/70 font-mono">
-                    Take as needed for creative recovery
-                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -248,7 +194,8 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center">
           
           <div className="mb-8">
-            <Cross className="w-16 h-16 mx-auto text-red-400 animate-pulse mb-6" />
+            <Skull className="w-16 h-16 mx-auto text-red-400 animate-pulse mb-6" 
+                   style={{ filter: 'drop-shadow(0 0 15px rgba(239, 68, 68, 0.5))' }} />
             <h2 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-6">
               Resurrect Your Brand?
             </h2>
@@ -276,7 +223,8 @@ const Index = () => {
       {/* Final Footer */}
       <footer className="py-8 px-4 border-t border-red-500/30">
         <div className="max-w-4xl mx-auto text-center">
-          <Cross className="w-8 h-8 mx-auto text-red-400/50 mb-4 animate-spin-slow" />
+          <Skull className="w-8 h-8 mx-auto text-red-400/50 mb-4" 
+                 style={{ filter: 'drop-shadow(0 0 10px rgba(239, 68, 68, 0.3))' }} />
           <p className="text-gray-500">
             © 2024 RIP Marketing. May creativity rest in peace... until we resurrect it.
           </p>
