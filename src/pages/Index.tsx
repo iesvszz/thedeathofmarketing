@@ -132,13 +132,8 @@ const Index = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-transparent to-green-900/10">
         <div className="max-w-4xl mx-auto text-center">
           
-          {/* Doctor Silhouette with Slow Pop Heart */}
+          {/* Doctor Silhouette */}
           <div className="mb-12 relative">
-            {/* Floating Heart Above */}
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-              <Heart className="w-8 h-8 text-green-400 animate-[bounce_3s_ease-in-out_infinite]" />
-            </div>
-            
             <div className="w-24 h-24 mx-auto bg-green-400/20 rounded-full flex items-center justify-center mb-6">
               <Heart className="w-12 h-12 text-green-400 animate-[pulse_2s_ease-in-out_infinite]" />
             </div>
