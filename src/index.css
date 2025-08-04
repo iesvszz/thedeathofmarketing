@@ -1,0 +1,149 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 120 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-black text-white font-inter;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .glitch-text {
+    position: relative;
+    color: #ffffff;
+    text-shadow: 
+      0.05em 0 0 #ff0040,
+      -0.05em -0.025em 0 #00ffff,
+      0.025em 0.05em 0 #ffff00;
+    animation: glitch-text 3s ease-in-out infinite;
+  }
+
+  .glitch-text:hover {
+    animation: glitch 0.3s ease-in-out;
+  }
+
+  @keyframes glitch-text {
+    0%, 90%, 100% {
+      text-shadow: 
+        0.05em 0 0 #ff0040,
+        -0.05em -0.025em 0 #00ffff,
+        0.025em 0.05em 0 #ffff00;
+    }
+    
+    5% {
+      text-shadow: 
+        0.025em 0.05em 0 #ff0040,
+        0.05em 0 0 #00ffff,
+        0 -0.05em 0 #ffff00;
+    }
+    
+    15% {
+      text-shadow: 
+        -0.05em -0.025em 0 #ff0040,
+        0.025em 0.025em 0 #00ffff,
+        -0.05em -0.05em 0 #ffff00;
+    }
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+
+  /* Torn paper effect */
+  .torn-edge {
+    position: relative;
+  }
+
+  .torn-edge::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    );
+  }
+
+  /* Static noise animation */
+  @keyframes static-noise {
+    0% { transform: translateX(0) translateY(0); }
+    10% { transform: translateX(-1px) translateY(-1px); }
+    20% { transform: translateX(1px) translateY(1px); }
+    30% { transform: translateX(-1px) translateY(1px); }
+    40% { transform: translateX(1px) translateY(-1px); }
+    50% { transform: translateX(0) translateY(-1px); }
+    60% { transform: translateX(-1px) translateY(0); }
+    70% { transform: translateX(1px) translateY(0); }
+    80% { transform: translateX(0) translateY(1px); }
+    90% { transform: translateX(-1px) translateY(-1px); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+
+  .animate-static {
+    animation: static-noise 0.3s infinite;
+  }
+}
