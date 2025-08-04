@@ -167,8 +167,7 @@ const Index = () => {
                 <CardContent className="p-8">
                   
                   {/* Pill Icon */}
-                  <div className="text-6xl mb-6 text-center animate-bounce transition-all duration-300" 
-                       style={{ animationDelay: `${index * 0.2}s` }}>
+                  <div className="text-6xl mb-6 text-center animate-bounce transition-all duration-300">
                     {service.icon}
                   </div>
                   
