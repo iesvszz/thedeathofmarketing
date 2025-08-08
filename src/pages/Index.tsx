@@ -47,7 +47,7 @@ const Index = () => {
           {/* Skull Image */}
           <div className="mb-8 relative">
             <img 
-              src="/lovable-uploads/c7081d71-3c4b-41d1-846f-365001d8e8e0.png" 
+              src="/lovable-uploads/57c9390f-3cce-4f12-a0d5-1c45966ae73d.png"
               alt="Skull" 
               className="w-32 h-32 mx-auto drop-shadow-2xl animate-[pulse_1.5s_ease-in-out_infinite]"
               style={{ 
