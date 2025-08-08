@@ -104,11 +104,11 @@ const Index = () => {
               </div>
               
               {/* Doctor Photo */}
-              <div className="w-40 h-40 mx-auto border-4 border-red-500/30 rounded-lg flex items-center justify-center relative z-10 backdrop-blur-sm overflow-hidden">
+              <div className="w-40 h-40 mx-auto border-4 border-red-500/30 rounded-lg flex items-center justify-center relative z-10 backdrop-blur-sm">
                 <img 
                   src="/lovable-uploads/8f60e794-5f66-4fbe-abbb-9de0c3f028b3.png"
                   alt="Dr. Jareer Samad"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
