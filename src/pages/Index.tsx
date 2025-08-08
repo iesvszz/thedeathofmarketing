@@ -103,9 +103,13 @@ const Index = () => {
                 <div className="absolute -bottom-6 -right-8 w-28 h-28 bg-gray-400/8 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
               </div>
               
-              {/* Photo Placeholder */}
-              <div className="w-40 h-40 mx-auto bg-gray-800/50 border-4 border-red-500/30 rounded-full flex items-center justify-center relative z-10 backdrop-blur-sm">
-                <div className="text-6xl">👨‍⚕️</div>
+              {/* Doctor Photo */}
+              <div className="w-40 h-40 mx-auto border-4 border-red-500/30 rounded-lg flex items-center justify-center relative z-10 backdrop-blur-sm overflow-hidden">
+                <img 
+                  src="/lovable-uploads/8f60e794-5f66-4fbe-abbb-9de0c3f028b3.png"
+                  alt="Dr. Jareer Samad"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             
@@ -214,7 +218,7 @@ const Index = () => {
           <Button 
             size="lg"
             className="bg-red-600 hover:bg-red-700 text-white px-16 py-8 text-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-red-600/50 hover:scale-110 mb-6"
-            onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+            onClick={() => window.open('https://wa.me/917321972175', '_blank')}
           >
             <MessageCircle className="mr-3 h-8 w-8" />
             Text the Doctor
