@@ -4,11 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skull, Heart, Pill, MessageCircle } from 'lucide-react';
-import { SkullImageUploader } from '@/components/BackgroundRemover';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [skullImageUrl, setSkullImageUrl] = useState<string | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -48,21 +46,15 @@ const Index = () => {
           
           {/* Skull Image */}
           <div className="mb-8 relative">
-            {skullImageUrl ? (
-              <img 
-                src={skullImageUrl} 
-                alt="Skull" 
-                className="w-20 h-20 mx-auto drop-shadow-2xl animate-pulse"
-                style={{ filter: 'drop-shadow(0 0 20px rgba(239, 68, 68, 0.6))' }}
-              />
-            ) : (
-              <div className="w-20 h-20 mx-auto bg-gray-800/50 border-2 border-red-500/30 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                <div className="text-4xl">💀</div>
-              </div>
-            )}
-            <div className="mt-4">
-              <SkullImageUploader onImageProcessed={setSkullImageUrl} />
-            </div>
+            <img 
+              src="/lovable-uploads/c7081d71-3c4b-41d1-846f-365001d8e8e0.png" 
+              alt="Skull" 
+              className="w-32 h-32 mx-auto drop-shadow-2xl animate-[pulse_1.5s_ease-in-out_infinite]"
+              style={{ 
+                filter: 'drop-shadow(0 0 20px rgba(239, 68, 68, 0.8)) drop-shadow(0 0 40px rgba(239, 68, 68, 0.6))',
+                animation: 'pulse 1.5s ease-in-out infinite alternate'
+              }}
+            />
           </div>
 
           {/* Main Headline */}
