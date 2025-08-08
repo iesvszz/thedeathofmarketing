@@ -106,7 +106,7 @@ const Index = () => {
               {/* Doctor Photo */}
               <div className="w-56 h-56 mx-auto flex items-center justify-center relative z-10">
                 <img 
-                  src="/lovable-uploads/8f60e794-5f66-4fbe-abbb-9de0c3f028b3.png"
+                  src="/lovable-uploads/8bd2871b-018c-47ea-94b9-632d09213e27.png"
                   alt="Dr. Jareer Samad"
                   className="w-full h-full object-contain"
                 />
@@ -178,7 +178,7 @@ const Index = () => {
                 <CardContent className="p-8">
                   
                   {/* Service Icon */}
-                  <div className="text-6xl mb-6 text-center animate-[bounce_5s_ease-in-out_infinite] transition-all duration-300">
+                  <div className="text-6xl mb-6 text-center animate-[bounce_1s_ease-in-out_infinite] transition-all duration-300">
                     {service.icon}
                   </div>
                   
@@ -204,8 +204,6 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center">
           
           <div className="mb-8">
-            <Skull className="w-16 h-16 mx-auto text-red-400 animate-pulse mb-6" 
-                   style={{ filter: 'drop-shadow(0 0 15px rgba(239, 68, 68, 0.5))' }} />
             <h2 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-6">
               Resurrect Your Brand?
             </h2>
@@ -223,6 +221,10 @@ const Index = () => {
             <MessageCircle className="mr-3 h-8 w-8" />
             Text the Doctor
           </Button>
+          
+          <p className="text-lg text-gray-400 mb-4">
+            +91 73219 72175
+          </p>
           
           <p className="text-red-400/70 animate-pulse text-lg">
             ⚠️ Side effects may include actual creativity
