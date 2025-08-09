@@ -96,7 +96,7 @@ const Index = () => {
           <div className="mb-12 relative">
             <div className="relative inline-block">
               {/* Doctor Photo */}
-              <div className="w-56 h-56 mx-auto flex items-center justify-center relative z-10">
+              <div className="w-80 h-80 mx-auto flex items-center justify-center relative z-10">
                 <img 
                   src="/lovable-uploads/8bd2871b-018c-47ea-94b9-632d09213e27.png"
                   alt="Dr. Jareer Samad"
