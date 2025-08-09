@@ -95,14 +95,6 @@ const Index = () => {
           {/* Doctor Photo Section */}
           <div className="mb-12 relative">
             <div className="relative inline-block">
-              {/* Smoke Effects */}
-              <div className="absolute inset-0 animate-pulse">
-                <div className="absolute -top-8 -left-8 w-32 h-32 bg-gray-400/10 rounded-full blur-xl animate-bounce"></div>
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gray-400/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                <div className="absolute -bottom-2 -left-4 w-20 h-20 bg-gray-400/20 rounded-full blur-md animate-bounce" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute -bottom-6 -right-8 w-28 h-28 bg-gray-400/8 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-              </div>
-              
               {/* Doctor Photo */}
               <div className="w-56 h-56 mx-auto flex items-center justify-center relative z-10">
                 <img 
@@ -178,7 +170,7 @@ const Index = () => {
                 <CardContent className="p-8">
                   
                   {/* Service Icon */}
-                  <div className="text-6xl mb-6 text-center animate-[bounce_1s_ease-in-out_infinite] transition-all duration-300">
+                  <div className="text-6xl mb-6 text-center animate-[bounce_3s_ease-in-out_infinite] transition-all duration-300">
                     {service.icon}
                   </div>
                   
