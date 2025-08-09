@@ -122,7 +122,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           
           <div className="text-center mb-16">
-            <Pill className="w-16 h-16 mx-auto text-lime-400 mb-6 animate-[bounce_1s_ease-in-out_infinite]" />
+            <Pill className="w-16 h-16 mx-auto text-lime-400 mb-6 animate-[bounce_2s_ease-in-out_infinite]" />
             <h2 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-4">
               Your Brand's Revival Prescription
             </h2>
@@ -138,7 +138,7 @@ const Index = () => {
                 <CardContent className="p-8">
                   
                   {/* Service Icon */}
-                  <div className="text-6xl mb-6 text-center animate-[bounce_1s_ease-in-out_infinite] transition-all duration-300">
+                  <div className="text-6xl mb-6 text-center animate-[bounce_2s_ease-in-out_infinite] transition-all duration-300">
                     {service.icon}
                   </div>
                   
