@@ -116,38 +116,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Could've Been Saved Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-transparent to-green-900/10">
-        <div className="max-w-4xl mx-auto text-center">
-          
-          {/* Doctor Silhouette */}
-          <div className="mb-12 relative">
-            <div className="w-24 h-24 mx-auto bg-green-400/20 rounded-full flex items-center justify-center mb-6">
-              <Heart className="w-12 h-12 text-green-400 animate-[pulse_2s_ease-in-out_infinite]" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-8">
-              It Could've Been Saved
-            </h2>
-          </div>
-
-          <Card className="bg-green-900/20 border-green-500/30 backdrop-blur-sm">
-            <CardContent className="p-8 md:p-12">
-              <blockquote className="text-xl md:text-2xl text-gray-300 leading-relaxed italic mb-6">
-                "Marketing didn't have to die. With the right intervention by{' '}
-                <strong className="text-green-400 not-italic">Dr. Jareer Samad</strong>, 
-                Chief Marketing Exorcist, it could have been saved."
-              </blockquote>
-              
-              {/* Prescription Pad Style */}
-              <div className="mt-8 p-4 bg-white/5 border border-green-400/30 rounded transform rotate-1">
-                <div className="text-green-400 font-mono text-sm">
-                  ℞ Prescription for Revival
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       {/* Services Section */}
       <section className="py-20 px-4">
@@ -170,7 +138,7 @@ const Index = () => {
                 <CardContent className="p-8">
                   
                   {/* Service Icon */}
-                  <div className="text-6xl mb-6 text-center animate-[bounce_2s_ease-in-out_infinite] transition-all duration-300">
+                  <div className="text-6xl mb-6 text-center animate-[bounce_1s_ease-in-out_infinite] transition-all duration-300">
                     {service.icon}
                   </div>
                   
