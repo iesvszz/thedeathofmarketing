@@ -138,7 +138,7 @@ const Index = () => {
                 <CardContent className="p-8">
                   
                   {/* Service Icon */}
-                  <div className="text-6xl mb-6 text-center animate-[bounce_5s_ease-in-out_infinite] transition-all duration-300">
+                  <div className="text-6xl mb-6 text-center animate-[bounce_8s_ease-in-out_infinite] transition-all duration-300">
                     {service.icon}
                   </div>
                   
