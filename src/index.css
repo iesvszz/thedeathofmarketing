@@ -43,20 +43,30 @@ All colors MUST be HSL.
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-black text-white font-inter;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
     min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    font-family: 'Playfair Display', serif;
   }
 }
 
 @layer components {
+  .hopping-emoji {
+    animation: static-noise 0.1s infinite; /* faster hop */
+    
+  }
+  .hopping-emoji:hover {
+    animation: static-noise 0.1s infinite; /* even faster hop on hover */
+  }
+
   .glitch-text {
     position: relative;
     color: #ffffff;
@@ -144,6 +154,6 @@ All colors MUST be HSL.
   }
 
   .animate-static {
-    animation: static-noise 0.3s infinite;
+    animation: static-noise 0.1s infinite;
   }
 }
