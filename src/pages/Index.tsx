@@ -15,27 +15,27 @@ const Index = () => {
   const services = [
     {
       title: "INJECTION OF CULTURE-LED IDEAS",
-      description: "Bold, meme-literate campaigns that punch through scroll fatigue.",
+      description: "Meme-literate campaigns that punch through scroll fatigue and make brands part of the conversation",
       icon: "💉",
-      bounceTime: "6s"
+      bounceTime: "3s"
     },
     {
       title: "DETOX FROM AI-GENERATED BLANDNESS",
       description: "Eliminate prompt-churned sameness. Replace with ideas that feel dangerously human.",
       icon: "🧪",
-      bounceTime: "8s"
+      bounceTime: "3s"
     },
     {
       title: "VITAMIN D(ISRUPTION)",
-      description: "Ideas that polarize safely — because average never made headlines.",
+      description: "Audacious, polarizing campaigns — because average never makes headlines",
       icon: "💊",
-      bounceTime: "10s"
+      bounceTime: "3s"
     },
     {
-      title: "DOSE OF VIRAL IMMUNITY",
-      description: "Build formats and moments that outlive the algorithm.",
+      title: "PRESCRIPTION FOR PARTICIPATION",
+      description: "Experiences and UGC-driven campaigns that turn audiences into co-creators and participants",
       icon: "🛡️",
-      bounceTime: "12s"
+      bounceTime: "3s"
     }
   ];
 
@@ -68,9 +68,17 @@ const Index = () => {
               <span className="bg-gradient-to-r from-lime-400 to-emerald-400 bg-clip-text text-transparent animate-pulse">
                 Marketing
               </span>
+
+            <br />
+             
             </h1>
             <div className="absolute -top-4 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 transform rotate-1"></div>
           </div>
+
+          <p className="text-3l text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+        If your marketing feels dead inside, it's time for a personality transplant.
+        <br />
+            </p>
 
           {/* Obituary */}
           <div className="bg-black/80 border-2 border-red-500/30 rounded-lg p-8 mb-12 backdrop-blur-sm relative">
@@ -80,21 +88,22 @@ const Index = () => {
             <div className="space-y-4 text-left max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
               <div><strong className="text-red-400">Creativity</strong> — Suffocated under 6 rounds of stakeholder feedback</div>
               <div><strong className="text-red-400">Strategy</strong> — Fractured from overexposure to trend decks</div>
-              <div><strong className="text-red-400">Execution</strong> — Heart stopped after 48 hours of prompt engineering</div>
+              <div><strong className="text-red-400">Execution</strong> — Pronounced dead after 48 hours of AI prompt engineering</div>
             </div>
           </div>
 
           {/* Doctor */}
           <div className="mb-12">
-            <div className="w-96 h-96 mx-auto flex items-center justify-center">
+            <div className="w-97 h-97 mx-auto flex items-center justify-center">
               <img
                 src="/lovable-uploads/8bd2871b-018c-47ea-94b9-632d09213e27.png"
                 alt="Dr. Jareer Samad"
                 className="w-full h-full object-contain"
               />
             </div>
-            <h3 className="text-3xl font-bold text-white mt-6 font-playfair">Jareer Samad</h3>
-            <p className="text-lg text-gray-300 mt-2">Chief Marketing Exorcist</p>
+            <h3 className="text-5xl font-bold text-white mt-6 font-playfair">Jareer Samad</h3>
+            <br />
+            <h2 className="text-2xl text-gray-300 mt-2">Designation: Marketing Exorcist</h2>
           </div>
         </div>
       </section>
@@ -104,8 +113,8 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Pill className="w-16 h-16 mx-auto text-lime-400 mb-6 animate-[bounce_3s_ease-in-out_infinite]" />
-            <h2 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-4">
-              Your Brand's Revival Prescription
+            <h2 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-4">
+              Here’s my treatment plan for resurrection 
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -144,21 +153,24 @@ const Index = () => {
       <h2 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-6">
         Resurrect Your Brand?
       </h2>
-      <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-        If your marketing feels dead inside, it's time for a personality transplant.<br />
-        Let's bring it back — louder, weirder, better.
+      <p className="text-l text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+        If your marketing feels dead inside, it's time for a personality transplant.
+        <br />
+        
+        Let's shock it back to life - louder, weirder and unforgettable
+
       </p>
     </div>
 
-    {/* WhatsApp Contact Section */}
-    <div className="mt-8">
+   {/* WhatsApp Contact Section */}
+<div className="mt-8">
   <a
     href="https://wa.me/917321972175"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-xl transition-transform transform hover:scale-105 shadow-lg"
   >
-    <MessageCircle className="mr-3 h-6 w-6" />
+    <img src="/whatsapp.png" alt="WhatsApp" className="mr-3 h-8 w-8" />
     Text the Doctor
   </a>
 </div>
