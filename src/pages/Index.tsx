@@ -75,36 +75,58 @@ const Index = () => {
             <div className="absolute -top-4 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 transform rotate-1"></div>
           </div>
 
-          <p className="text-3l text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-        If your marketing feels dead inside, it's time for a personality transplant.
-        <br />
-            </p>
-
           {/* Obituary */}
-          <div className="bg-black/80 border-2 border-red-500/30 rounded-lg p-8 mb-12 backdrop-blur-sm relative">
-            <div className="absolute top-2 right-2">
-              <Badge variant="destructive" className="animate-pulse">DECEASED</Badge>
-            </div>
-            <div className="space-y-4 text-left max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
-              <div><strong className="text-red-400">Creativity</strong> — Suffocated under 6 rounds of stakeholder feedback</div>
-              <div><strong className="text-red-400">Strategy</strong> — Fractured from overexposure to trend decks</div>
-              <div><strong className="text-red-400">Execution</strong> — Pronounced dead after 48 hours of AI prompt engineering</div>
-            </div>
-          </div>
+<div className="bg-black/80 border-2 border-red-500/50 rounded-lg p-8 mb-12 backdrop-blur-sm relative shadow-lg shadow-red-500/20">
+  <div className="absolute top-2 right-2">
+    <Badge variant="destructive" className="animate-pulse">DECEASED</Badge>
+  </div>
+
+  {/* Highlighted intro line with Playfair font */}
+  <p className="text-xl md:text-2xl font-playfair font-bold text-red-400 text-center mb-6 leading-relaxed animate-pulse">
+    If your marketing feels dead inside, it's time for a personality transplant.
+  </p>
+
+  <div className="space-y-4 text-left max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
+    <div>
+      <strong className="text-red-400">Creativity</strong> — Suffocated under 6 rounds of stakeholder feedback
+    </div>
+    <div>
+      <strong className="text-red-400">Strategy</strong> — Fractured from overexposure to trend decks
+    </div>
+    <div>
+      <strong className="text-red-400">Execution</strong> — Pronounced dead after 48 hours of AI prompt engineering
+    </div>
+  </div>
+</div>
 
           {/* Doctor */}
           <div className="mb-12">
-            <div className="w-97 h-97 mx-auto flex items-center justify-center">
-              <img
-                src="/lovable-uploads/8bd2871b-018c-47ea-94b9-632d09213e27.png"
-                alt="Dr. Jareer Samad"
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <h3 className="text-5xl font-bold text-white mt-6 font-playfair">Jareer Samad</h3>
-            <br />
-            <h2 className="text-2xl text-gray-300 mt-2">Designation: Marketing Exorcist</h2>
-          </div>
+  {/* New top text */}
+  <p className="text-xl md:text-4xl font-semibold text-lime-400 text-center mb-6 leading-relaxed">
+    But it doesn't have to stay dead.<br />Because now we have
+  </p>
+
+  <div className="relative w-97 h-97 mx-auto flex items-center justify-center">
+    {/* Smoke layers (pure CSS) */}
+    <div className="absolute inset-0 z-0 smoke-layer pointer-events-none"></div>
+
+    {/* Photo on top */}
+    <img
+      src="/lovable-uploads/61075f9c-b5a5-4e37-951d-de0442316ae4.png"
+      alt="Dr. Jareer Samad"
+      className="relative z-10 w-full h-full object-contain rounded-lg"
+    />
+  </div>
+
+  <h3 className="text-5xl font-bold text-white mt-6 font-sans tracking-tight">
+    Jareer Samad
+  </h3>
+  <br />
+  <h2 className="text-2xl text-gray-300 mt-2 font-sans tracking-wide">
+    Designation: Marketing Exorcist
+  </h2>
+</div>
+
         </div>
       </section>
 

@@ -80,6 +80,43 @@ All colors MUST be HSL.
   .glitch-text:hover {
     animation: glitch 0.3s ease-in-out;
   }
+  @keyframes smokeMove {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+  50% { transform: translate(-10px, -10px) scale(1.05); opacity: 0.6; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+}
+
+/* Soft smoke using blurred radial gradients */
+.smoke-layer {
+  background-image:
+    radial-gradient(closest-side at 20% 20%, rgba(255,255,255,0.06), transparent 40%),
+    radial-gradient(closest-side at 80% 40%, rgba(255,255,255,0.06), transparent 35%),
+    radial-gradient(closest-side at 50% 80%, rgba(255,255,255,0.04), transparent 45%);
+  background-size: 200% 200%;
+  filter: blur(18px) saturate(80%);
+  opacity: 0.45;
+  mix-blend-mode: screen;
+  animation: smokeShiftA 9s ease-in-out infinite;
+}
+
+/* subtle multi-stop motion */
+@keyframes smokeShiftA {
+  0% {
+    background-position: 0% 0%, 100% 0%, 50% 100%;
+    transform: translateZ(0) scale(1);
+    opacity: 0.42;
+  }
+  50% {
+    background-position: 10% 20%, 90% 30%, 60% 80%;
+    transform: scale(1.02);
+    opacity: 0.6;
+  }
+  100% {
+    background-position: 0% 0%, 100% 0%, 50% 100%;
+    transform: scale(1);
+    opacity: 0.42;
+  }
+}
 
   @keyframes glitch-text {
     0%, 90%, 100% {
