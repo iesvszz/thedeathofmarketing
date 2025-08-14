@@ -107,10 +107,9 @@ Cause of death - Playing it safe in a post AI world
   <p className="text-xl md:text-4xl font-semibold text-lime-400 text-center mb-6 leading-relaxed">
     But it doesn't have to stay dead.<br />Because now we have
   </p>
-
-  <div className="relative w-72 h-72 md:w-80 md:h-80 mx-auto flex items-center justify-center">
-  {/* Smoke layers */}
-  <div className="absolute inset-0 z-0 smoke-layer pointer-events-none"></div>
+<div className="relative w-80 h-80 md:w-88 md:h-88 mx-auto flex items-center justify-center">
+  {/* Animated green smoke background */}
+  <div className="absolute inset-0 z-0 animate-green-smoke pointer-events-none"></div>
 
   {/* Photo on top */}
   <img
@@ -119,6 +118,8 @@ Cause of death - Playing it safe in a post AI world
     className="relative z-10 w-full h-full object-contain rounded-lg"
   />
 </div>
+
+
 <h3 className="text-5xl font-bold text-white font-sans leading-tight">
   Jareer Samad
 </h3>
@@ -177,7 +178,7 @@ Cause of death - Playing it safe in a post AI world
         Resurrect Your Brand
       </h2>
       <p className="text-l text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-        If your marketing feels dead inside, it's time for a personality transplant.
+        If your marketing feels dead inside, it's time for a personality transplant.<br />
                 Let's shock it back to life - louder, weirder and unforgettable
 
         <br />
@@ -188,15 +189,24 @@ Cause of death - Playing it safe in a post AI world
 
    {/* WhatsApp Contact Section */}
 <div className="mt-8">
-  <a
-    href="https://wa.me/917321972175"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-xl transition-transform transform hover:scale-105 shadow-lg"
+<a
+  href="https://wa.me/917321972175?text=Hey%20Jareer!%20I%20came%20across%20your%20website%20and%20wanted%20to%20know%20more."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-xl transition-transform transform hover:scale-105 shadow-lg"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="mr-3 h-8 w-8 fill-current"
+    viewBox="0 0 32 32"
   >
-    <img src="/whatsapp.png" alt="WhatsApp" className="mr-3 h-8 w-8" />
-    Text the Doctor
-  </a>
+    <path d="M16 .4C7.3.4.2 7.5.2 16.2c0 2.9.8 5.7 2.2 8.2L.1 31.9l7.7-2c2.4 1.3 5.1 2 8.1 2 8.7 0 15.8-7.1 15.8-15.8C31.7 7.5 24.6.4 16 .4zm0 28.6c-2.7 0-5.2-.7-7.4-2.1l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.4C2.3 9 8.5 2.8 16 2.8c7.5 0 13.7 6.2 13.7 13.7 0 7.5-6.2 13.7-13.7 13.7zm7.5-10.3c-.4-.2-2.2-1.1-2.6-1.3-.4-.1-.7-.2-1 .2s-1.2 1.3-1.4 1.6c-.3.3-.5.3-.9.1-2.5-1.2-4.1-2.7-5.4-5-.3-.5-.1-.8.2-1.1.2-.3.5-.6.7-.9.2-.3.3-.5.1-.9s-1-2.4-1.4-3.2c-.4-.8-.8-.7-1.1-.7h-.9c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.9s1.6 4.5 1.8 4.8c.2.3 3.1 4.8 7.6 6.7 2.8 1.2 3.9 1 5.3.9 1.6-.2 2.2-1.5 2.5-2.9.2-1.5.2-2.7.1-2.9-.2-.4-.3-.6-.7-.8z" />
+  </svg>
+  Text the Doctor
+</a>
+
+
+
 </div>
 
     <p className="text-red-400/70 animate-pulse text-lg mt-6">
