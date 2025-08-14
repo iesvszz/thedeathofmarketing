@@ -7,8 +7,14 @@ import { Skull, Pill, MessageCircle } from 'lucide-react';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+  // The content for your social media preview
+  const shareTitle = "Want to rise above the noise?";
+  const shareDescription = "I help brands standout with bold ideas in a world drowning with sameness";
+  const shareUrl = "https://www.thedeathofmarketing.com";
+  const shareImage = `${shareUrl}/Outreachphoto.png`; // Make sure outreach.png is in your /public folder
 
   useEffect(() => {
+    document.title = "Let’s resurrect marketing";
     setIsVisible(true);
   }, []);
 
@@ -41,6 +47,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
+      
       {/* Background */}
       <div className="fixed inset-0 opacity-10 z-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0ic3RhdGljIiB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMDAwIi8+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3N0YXRpYykiLz48L3N2Zz4=')] animate-pulse"></div>
 
@@ -195,14 +202,15 @@ Cause of death - Playing it safe in a post AI world
   rel="noopener noreferrer"
   className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-xl transition-transform transform hover:scale-105 shadow-lg"
 >
+  
+  Prescribe my Treatment . 
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="mr-3 h-8 w-8 fill-current"
-    viewBox="0 0 32 32"
-  >
+    className="mr-1 h-9 w-7 fill-current"
+    viewBox="0 0 32 39"
+  > 
     <path d="M16 .4C7.3.4.2 7.5.2 16.2c0 2.9.8 5.7 2.2 8.2L.1 31.9l7.7-2c2.4 1.3 5.1 2 8.1 2 8.7 0 15.8-7.1 15.8-15.8C31.7 7.5 24.6.4 16 .4zm0 28.6c-2.7 0-5.2-.7-7.4-2.1l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.4C2.3 9 8.5 2.8 16 2.8c7.5 0 13.7 6.2 13.7 13.7 0 7.5-6.2 13.7-13.7 13.7zm7.5-10.3c-.4-.2-2.2-1.1-2.6-1.3-.4-.1-.7-.2-1 .2s-1.2 1.3-1.4 1.6c-.3.3-.5.3-.9.1-2.5-1.2-4.1-2.7-5.4-5-.3-.5-.1-.8.2-1.1.2-.3.5-.6.7-.9.2-.3.3-.5.1-.9s-1-2.4-1.4-3.2c-.4-.8-.8-.7-1.1-.7h-.9c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.9s1.6 4.5 1.8 4.8c.2.3 3.1 4.8 7.6 6.7 2.8 1.2 3.9 1 5.3.9 1.6-.2 2.2-1.5 2.5-2.9.2-1.5.2-2.7.1-2.9-.2-.4-.3-.6-.7-.8z" />
   </svg>
-  Text the Doctor
 </a>
 
 
