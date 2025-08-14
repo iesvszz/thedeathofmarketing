@@ -108,25 +108,24 @@ Cause of death - Playing it safe in a post AI world
     But it doesn't have to stay dead.<br />Because now we have
   </p>
 
-  <div className="relative w-97 h-97 mx-auto flex items-center justify-center">
-    {/* Smoke layers (pure CSS) */}
-    <div className="absolute inset-0 z-0 smoke-layer pointer-events-none"></div>
+  <div className="relative w-72 h-72 md:w-80 md:h-80 mx-auto flex items-center justify-center">
+  {/* Smoke layers */}
+  <div className="absolute inset-0 z-0 smoke-layer pointer-events-none"></div>
 
-    {/* Photo on top */}
-    <img
-      src="/lovable-uploads/61075f9c-b5a5-4e37-951d-de0442316ae4.png"
-      alt="Dr. Jareer Samad"
-      className="relative z-10 w-full h-full object-contain rounded-lg"
-    />
-  </div>
+  {/* Photo on top */}
+  <img
+    src="/lovable-uploads/61075f9c-b5a5-4e37-951d-de0442316ae4.png"
+    alt="Dr. Jareer Samad"
+    className="relative z-10 w-full h-full object-contain rounded-lg"
+  />
+</div>
+<h3 className="text-5xl font-bold text-white font-sans leading-tight">
+  Jareer Samad
+</h3>
+<h2 className="text-3xl font-medium text-lime-400 font-sans leading-tight">
+  Marketing Exorcist
+</h2>
 
-  <h3 className="text-5xl font-bold text-white mt-6 font-sans tracking-tight">
-    Jareer Samad
-  </h3>
-  <br />
-  <h2 className="text-2xl text-gray-300 mt-2 font-sans tracking-wide">
-   Marketing Exorcist
-  </h2>
 </div>
 
         </div>
@@ -201,7 +200,7 @@ Cause of death - Playing it safe in a post AI world
 </div>
 
     <p className="text-red-400/70 animate-pulse text-lg mt-6">
-      ⚠️ Side effects may include actual creativity
+      
     </p>
   </div>
 </section>
