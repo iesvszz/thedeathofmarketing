@@ -83,7 +83,9 @@ const Index = () => {
 
   {/* Highlighted intro line with Playfair font */}
   <p className="text-xl md:text-2xl font-playfair font-bold text-red-400 text-center mb-6 leading-relaxed animate-pulse">
-    If your marketing feels dead inside, it's time for a personality transplant.
+   
+Cause of death - Playing it safe in a post AI world
+
   </p>
 
   <div className="space-y-4 text-left max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
@@ -123,7 +125,7 @@ const Index = () => {
   </h3>
   <br />
   <h2 className="text-2xl text-gray-300 mt-2 font-sans tracking-wide">
-    Designation: Marketing Exorcist
+   Marketing Exorcist
   </h2>
 </div>
 
@@ -173,14 +175,15 @@ const Index = () => {
     
     <div className="mb-8">
       <h2 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-6">
-        Resurrect Your Brand?
+        Resurrect Your Brand
       </h2>
       <p className="text-l text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
         If your marketing feels dead inside, it's time for a personality transplant.
+                Let's shock it back to life - louder, weirder and unforgettable
+
         <br />
         
-        Let's shock it back to life - louder, weirder and unforgettable
-
+        
       </p>
     </div>
 
@@ -206,9 +209,9 @@ const Index = () => {
       {/* Final Footer */}
       <footer className="py-8 px-4 border-t border-red-500/30">
         <div className="max-w-4xl mx-auto text-center">
-          <Skull className="w-8 h-8 mx-auto text-red-400/50 mb-4" style={{ filter: 'drop-shadow(0 0 10px rgba(239, 68, 68, 0.3))' }} />
+        
           <p className="text-gray-500">
-            © 2024 RIP Marketing. May creativity rest in peace... until we resurrect it.
+            © 2025 RIP Marketing. May creativity rest in peace... until we resurrect it.
           </p>
         </div>
       </footer>
