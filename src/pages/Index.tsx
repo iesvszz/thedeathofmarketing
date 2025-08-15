@@ -150,7 +150,7 @@ const Index = () => {
 
         {/* Services */}
         {/* CHANGE: Standardized padding to py-12 */}
-        <section className="py-12 px-4">
+        <section className="py-1 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Pill className="w-16 h-16 mx-auto text-lime-400 mb-6 animate-[bounce_3s_ease-in-out_infinite]" />
@@ -188,7 +188,7 @@ const Index = () => {
 
         {/* Footer CTA */}
         {/* CHANGE: Standardized padding to py-12 */}
-        <section className="py-12 px-4 bg-gradient-to-t from-red-900/20 to-transparent">
+        <section className="py-4 px-4 bg-gradient-to-t from-red-900/20 to-transparent">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
               <h2 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-6">
